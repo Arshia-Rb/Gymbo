@@ -1,1 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+/* Logo Font */
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-logo: "Permanent Marker", cursive;
+}

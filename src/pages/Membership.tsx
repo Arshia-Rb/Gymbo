@@ -1,5 +1,7 @@
+import NavBar from "../ui/NavBar";
+
 function Membership() {
-  return <div>Membership</div>;
+  return <NavBar />;
 }
 
 export default Membership;

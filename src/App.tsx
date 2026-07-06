@@ -2,7 +2,7 @@ import { Routes, Route, BrowserRouter } from "react-router";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Classes from "./pages/Classes";
-import Membership from "./pages/membership";
+import Membership from "./pages/Membership";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
