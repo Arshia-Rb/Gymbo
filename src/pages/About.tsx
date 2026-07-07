@@ -1,5 +1,7 @@
+import NavBar from "../ui/NavBar";
+
 function About() {
-  return <div>About</div>;
+  return <NavBar />;
 }
 
 export default About;

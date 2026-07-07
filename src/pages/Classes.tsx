@@ -1,5 +1,7 @@
+import NavBar from "../ui/NavBar";
+
 function Classes() {
-  return <div>Classes</div>;
+  return <NavBar />;
 }
 
 export default Classes;

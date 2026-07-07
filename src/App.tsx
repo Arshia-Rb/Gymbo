@@ -6,21 +6,29 @@ import Membership from "./pages/Membership";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
+import { useState } from "react";
+import MobileMenu from "./ui/MobileMenu";
+import { MobileMenuContext } from "./context/MobileMenueContext";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="classes" element={<Classes />} />
-        <Route path="membership" element={<Membership />} />
-        <Route path="login" element={<Login />} />
-        <Route path="*" element={<PageNotFound />} />
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-        <Route path="about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
+  return (
+    <MobileMenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+      <BrowserRouter>
+        {isMenuOpen && <MobileMenu />}
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="classes" element={<Classes />} />
+          <Route path="membership" element={<Membership />} />
+          <Route path="login" element={<Login />} />
+          <Route path="*" element={<PageNotFound />} />
+
+          <Route path="about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+    </MobileMenuContext.Provider>
   );
 }
 
