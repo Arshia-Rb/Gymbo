@@ -8,13 +8,17 @@ interface stringIndex {
 }
 
 const baseStyles =
-  "cursor-pointer rounded-sm border-2 px-4 py-2 text-[0.8rem] font-bold  ";
+  "cursor-pointer rounded-sm px-4 py-2 text-[0.8rem] font-bold  ";
 
 const variations: stringIndex = {
   primary:
-    "border-amber-400 bg-amber-400 text-black transition-all hover:bg-amber-500 hover:border-amber-500",
+    "border-amber-400 border-2 bg-amber-400 text-black transition-all hover:bg-amber-500 hover:border-amber-500",
   secondary:
-    "border-white bg-black text-white transition-all hover:border-amber-400 hover:bg-amber-400 hover:text-black",
+    "border-white bg-black border-2 text-white transition-all hover:border-amber-400 hover:bg-amber-400 hover:text-black",
+  pricing:
+    "w-full text-center border-amber-400 text-white bg-neutral-950 border-1",
+  mostPopular:
+    "w-full text-center border-amber-400 text-black bg-amber-400 border-1",
 };
 
 function Button({ children, type = "primary" }: ButtonProps) {

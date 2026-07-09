@@ -1,5 +1,6 @@
 import Hero from "../features/Home/Hero";
-import InfoRow from "../features/Home/InfoRow";
+import Plans from "../features/Home/Plans";
+
 import NavBar from "../ui/NavBar";
 
 function Home() {
@@ -7,6 +8,7 @@ function Home() {
     <>
       <NavBar />
       <Hero />
+      <Plans />
     </>
   );
 }

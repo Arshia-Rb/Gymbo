@@ -5,6 +5,14 @@
 
 @import "tailwindcss";
 
+/*
+Brand color: amber-400
+text color: white
+secondary text: stone-400
+
+
+*/
+
 @theme {
   --font-sans: "Manrope", sans-serif;
   --font-heading: "Bebas Neue", sans-serif;

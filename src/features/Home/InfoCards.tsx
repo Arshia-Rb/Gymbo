@@ -1,4 +1,4 @@
-import InfoRow from "./InfoRow";
+import InfoRow from "../../ui/InfoRow";
 import { FaDumbbell } from "react-icons/fa";
 import { RiUserStarFill } from "react-icons/ri";
 import { FaRegCalendar } from "react-icons/fa6";
@@ -31,7 +31,7 @@ function InfoCards() {
       <li className="p-4">
         <InfoRow
           Icon={MdOutlineQrCode2}
-          header="QR membership"
+          header="QR Membership"
           content="Use your given code to enter the gym."
         ></InfoRow>
       </li>

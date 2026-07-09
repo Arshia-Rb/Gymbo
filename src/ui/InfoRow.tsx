@@ -1,5 +1,5 @@
 import type { IconType } from "react-icons";
-import IconContainer from "../../ui/IconContainer";
+import IconContainer from "./IconContainer";
 
 interface InfoRowProps {
   header: string;
