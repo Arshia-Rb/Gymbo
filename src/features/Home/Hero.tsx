@@ -2,9 +2,11 @@ import Button from "../../ui/Button";
 import { MdArrowForward } from "react-icons/md";
 import { IoPlayCircleOutline } from "react-icons/io5";
 
+import InfoCards from "./InfoCards";
+
 function Hero() {
   return (
-    <section className="relative h-fit overflow-hidden bg-black text-white sm:h-screen">
+    <section className="relative h-fit overflow-hidden bg-black text-white">
       <div className="md: relative z-10 flex w-50 flex-col gap-1 p-4 sm:w-80 md:mt-20 md:ml-40">
         <h1 className="font-heading text-5xl md:text-6xl">
           STRONGER <span className="text-amber-400">EVERY</span> DAY.
@@ -28,6 +30,7 @@ function Hero() {
         src="../../../public/images/gymGuy5.jpg"
         alt="gym-guy-image"
       />
+      <InfoCards />
     </section>
   );
 }

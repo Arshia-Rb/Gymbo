@@ -12,7 +12,7 @@ function MobileMenu() {
   }
 
   return (
-    <menu className="absolute right-0 z-20 flex h-dvh w-2/3 flex-col border-l border-stone-300 bg-black font-semibold text-white sm:hidden">
+    <menu className="absolute right-0 z-50 flex h-dvh w-2/3 flex-col border-l border-stone-300 bg-black font-semibold text-white sm:hidden">
       <button onClick={handleCloseMenu} className="mt-6 mr-6 ml-auto">
         <VscClose className="h-8 w-8" />
       </button>
