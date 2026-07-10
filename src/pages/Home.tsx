@@ -1,3 +1,4 @@
+import Carousel from "../features/Home/Carousel";
 import Hero from "../features/Home/Hero";
 import Plans from "../features/Home/Plans";
 
@@ -9,6 +10,7 @@ function Home() {
       <NavBar />
       <Hero />
       <Plans />
+      <Carousel />
     </>
   );
 }
