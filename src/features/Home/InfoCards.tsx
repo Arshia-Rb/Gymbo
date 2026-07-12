@@ -12,28 +12,28 @@ function InfoCards() {
           Icon={FaDumbbell}
           header="Modern Equipment"
           content="Train with the best equipment for maximum results."
-        ></InfoRow>
+        />
       </li>
       <li className="p-4">
         <InfoRow
           Icon={RiUserStarFill}
           header="Expert Trainers"
           content="Certified trainers to guide you at every step."
-        ></InfoRow>
+        />
       </li>
       <li className="p-4">
         <InfoRow
           Icon={FaRegCalendar}
           header="Group Classes"
           content="Join various classes that keep you motivated."
-        ></InfoRow>
+        />
       </li>
       <li className="p-4">
         <InfoRow
           Icon={MdOutlineQrCode2}
           header="QR Membership"
           content="Use your given code to enter the gym."
-        ></InfoRow>
+        />
       </li>
     </ul>
   );
