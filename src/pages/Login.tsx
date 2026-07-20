@@ -2,11 +2,12 @@ import { Link } from "react-router";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 import LoginContainer from "../ui/LoginContainer";
+import CustomForm from "../ui/CustomForm";
 
 function Login() {
   return (
     <LoginContainer>
-      <form className="flex max-w-md flex-col gap-6 rounded-2xl border border-stone-800 bg-zinc-950 px-8 py-6">
+      <CustomForm>
         <div className="space-y-2">
           <h2 className="text-3xl font-bold">Welcome Back</h2>
           <p className="text-sm text-stone-500">
@@ -56,7 +57,7 @@ function Login() {
             Sign Up
           </Link>
         </div>
-      </form>
+      </CustomForm>
     </LoginContainer>
   );
 }

@@ -9,6 +9,7 @@ import About from "./pages/About";
 import { useState } from "react";
 import MobileMenu from "./ui/MobileMenu";
 import { MobileMenuContext } from "./context/MobileMenueContext";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -23,6 +24,7 @@ function App() {
           <Route path="classes" element={<Classes />} />
           <Route path="membership" element={<Membership />} />
           <Route path="login" element={<Login />} />
+          <Route path="sign-up" element={<SignUp />} />
           <Route path="*" element={<PageNotFound />} />
 
           <Route path="about" element={<About />} />
