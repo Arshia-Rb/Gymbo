@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 import LoginContainer from "../ui/LoginContainer";
@@ -48,12 +49,12 @@ function Login() {
           <p className="text-center text-sm text-stone-500">
             Don't have an account?
           </p>
-          <a
-            href="#"
+          <Link
+            to="/sign-up"
             className="text-sm font-semibold text-amber-400 hover:underline"
           >
             Sign Up
-          </a>
+          </Link>
         </div>
       </form>
     </LoginContainer>

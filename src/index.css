@@ -18,3 +18,12 @@ secondary text: stone-400
   --font-heading: "Bebas Neue", sans-serif;
   --font-logo: "Permanent Marker", cursive;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #09090b inset;
+  -webkit-text-fill-color: white;
+  transition: background-color 9999s ease-in-out 0s;
+}
