@@ -3,9 +3,12 @@ import { MobileMenuContext } from "../context/MobileMenueContext";
 import NavBarLinks from "./NavBarLinks";
 import { VscClose } from "react-icons/vsc";
 import Button from "./Button";
+import { useNavigate } from "react-router";
 
 function MobileMenu() {
   const { setIsMenuOpen } = useContext(MobileMenuContext)!;
+
+  const navigate = useNavigate();
 
   function handleCloseMenu() {
     setIsMenuOpen((state) => !state);
@@ -19,8 +22,23 @@ function MobileMenu() {
 
       <NavBarLinks parentClassName="flex flex-col items-center gap-4 divide-y divide-stone-400" />
       <div className="mt-5 flex justify-center gap-4">
-        <Button type="secondary">Log In</Button>
-        <Button>Sign Up</Button>
+        <Button
+          onClick={() => {
+            navigate("/login");
+            handleCloseMenu();
+          }}
+          type="secondary"
+        >
+          Log In
+        </Button>
+        <Button
+          onClick={() => {
+            navigate("/sign-up");
+            handleCloseMenu();
+          }}
+        >
+          Sign Up
+        </Button>
       </div>
     </menu>
   );

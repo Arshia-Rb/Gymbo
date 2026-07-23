@@ -16,14 +16,14 @@ function NavBar() {
   }
 
   return (
-    <nav className="sticky top-0 left-0 z-40 flex w-full justify-between bg-black px-4 py-4 text-white sm:px-8">
+    <nav className="p4 sticky top-0 left-0 z-40 flex w-full justify-between bg-black text-white sm:px-8">
       <Logo />
       <NavBarLinks parentClassName="hidden sm:flex sm:items-center sm:gap-6 sm:text-base sm:font-semibold" />
       <div className="hidden sm:flex sm:gap-4">
         <Button onClick={() => navigate("/login")} type="secondary">
           Log In
         </Button>
-        <Button>Sign Up</Button>
+        <Button onClick={() => navigate("/sign-up")}>Sign Up</Button>
       </div>
       <button onClick={handleMenuClick} className="sm:hidden">
         <HiOutlineMenu className="h-8 w-8" />
