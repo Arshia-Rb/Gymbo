@@ -44,11 +44,11 @@ function MembershipInfo() {
           </tr>
           <tr>
             <th className="text-stone-400">Days remaining:</th>
-            <td className="pl-10 font-medium">27 Days</td>
+            <td className="pl-10 text-xl font-medium">27 Days</td>
           </tr>
           <tr>
             <th className="text-stone-400">Usage remaining:</th>
-            <td className="pl-10 font-medium">13 Usages</td>
+            <td className="pl-10 text-xl font-medium">13 Usages</td>
           </tr>
         </tbody>
       </table>

@@ -17,7 +17,7 @@ function MembershipLayout() {
     </>
   ) : (
     <>
-      <div className="flex h-dvh flex-col items-center bg-zinc-950 px-4 py-8 text-center">
+      <div className="flex min-h-dvh flex-col items-center bg-zinc-950 px-4 py-8 text-center">
         <h2 className="text-3xl font-bold text-white">
           Here is your membership plan:
         </h2>

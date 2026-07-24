@@ -6,7 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 function Footer() {
   return (
-    <footer className="bg-zinc-950 px-8 py-6">
+    <footer className="border-t border-stone-800 bg-black px-8 py-6">
       <div className="flex justify-between md:justify-around">
         <div>
           <h3 className="mb-2 text-base font-bold text-white">Quick links</h3>
