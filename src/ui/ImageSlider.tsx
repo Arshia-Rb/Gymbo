@@ -3,9 +3,9 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 const images: string[] = [
-  "gymEnvironment.jpg",
-  "gymEnvironment1.jpg",
-  "gymEnvironment3.jpg",
+  "gymEnvironment.webp",
+  "gymEnvironment1.webp",
+  "gymEnvironment3.webp",
 ];
 
 function ImageSlider() {
@@ -26,7 +26,7 @@ function ImageSlider() {
         <IoIosArrowBack />
       </button>
       <img
-        src={`../../public/images/environment/${images[imageIndex]}`}
+        src={`images/environment/${images[imageIndex]}`}
         className="mx-auto max-w-3/4 rounded-2xl border-4 border-stone-400 object-cover shadow-md shadow-stone-400"
       />
       <button onClick={handleNext} className="text-2xl text-stone-400">

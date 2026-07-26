@@ -27,7 +27,7 @@ function Hero() {
       </div>
       <img
         className="absolute top-0 right-0 h-64 w-64 zoom-120 object-cover sm:h-120 sm:w-3/4 sm:zoom-100"
-        src="../../../public/images/gymGuy5.jpg"
+        src="images/hero.jpg"
         alt="gym-guy-image"
       />
       <InfoCards />
