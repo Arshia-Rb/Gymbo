@@ -18,7 +18,7 @@ function ClassCard({ heading, img, schedule, content }: ClassCardProps) {
         <p className="text-sm font-medium text-stone-400">{schedule}</p>
         <p className="text-sm font-medium text-stone-400">{content}</p>
       </div>
-      <button className="mt-4 h-10 w-full rounded-b-xl bg-amber-400 text-lg font-bold text-black">
+      <button className="mt-4 h-10 w-full rounded-b-xl bg-amber-400 text-lg font-bold text-black hover:cursor-pointer hover:bg-amber-500">
         Enroll
       </button>
     </div>

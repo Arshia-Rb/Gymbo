@@ -3,8 +3,15 @@ import { MdArrowForward } from "react-icons/md";
 import { IoPlayCircleOutline } from "react-icons/io5";
 
 import InfoCards from "./InfoCards";
+import { useNavigate } from "react-router";
 
 function Hero() {
+  const navigate = useNavigate();
+
+  function handleYoutube() {
+    window.open("https://youtube.com", "_blank", "noopener ,noreferrer");
+  }
+
   return (
     <section className="relative h-fit overflow-hidden bg-black text-white">
       <div className="md: relative z-10 flex w-50 flex-col gap-1 p-4 sm:w-80 md:mt-20 md:ml-40">
@@ -15,11 +22,11 @@ function Hero() {
           Join Gymbo fitness and become the strongest version of yourself
         </p>
         <div className="mb-2 flex flex-col gap-3 sm:flex-row">
-          <Button type="primary">
+          <Button onClick={() => navigate("/sign-up")} type="primary">
             Join Now
             <MdArrowForward className="ml-4 inline size-6" />
           </Button>
-          <Button type="secondary">
+          <Button onClick={handleYoutube} type="secondary">
             <IoPlayCircleOutline className="mr-2 inline size-6" />
             Watch video
           </Button>

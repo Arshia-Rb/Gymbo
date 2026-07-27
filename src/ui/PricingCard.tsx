@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import type { PlanStructure } from "../features/Home/Plans";
 import Button from "./Button";
 import { FaCheck } from "react-icons/fa";
@@ -8,6 +9,8 @@ interface PricingCardProps {
 }
 
 function PricingCard({ plan, mostPopular }: PricingCardProps) {
+  const navigate = useNavigate();
+
   return (
     <div
       className={`relative my-6 h-80 w-full rounded-2xl border-2 ${mostPopular ? "border-amber-400" : "border-stone-800"} bg-neutral-950 p-6`}
@@ -32,9 +35,13 @@ function PricingCard({ plan, mostPopular }: PricingCardProps) {
       </ul>
 
       {mostPopular ? (
-        <Button type="mostPopular">Choose Plan</Button>
+        <Button onClick={() => navigate("/login")} type="mostPopular">
+          Choose Plan
+        </Button>
       ) : (
-        <Button type="pricing">Choose Plan</Button>
+        <Button onClick={() => navigate("/login")} type="pricing">
+          Choose Plan
+        </Button>
       )}
     </div>
   );

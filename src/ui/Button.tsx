@@ -1,7 +1,7 @@
 interface ButtonProps {
   children: React.ReactNode;
   type?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 //Used to be able to recieve string props,then used them to index different styles
 interface stringIndex {
@@ -16,9 +16,9 @@ const variations: stringIndex = {
   secondary:
     "border-white text-[0.8rem] bg-black border-2 text-white transition-all hover:border-amber-400 hover:bg-amber-400 hover:text-black",
   pricing:
-    "w-full text-[0.8rem] text-center border-amber-400 text-white bg-neutral-950 border-1",
+    "w-full text-[0.8rem] text-center border-amber-400 text-white bg-neutral-950 border-1 transition-all hover:bg-amber-400 hover:text-black",
   mostPopular:
-    "w-full text-[0.8rem] text-center border-amber-400 text-black bg-amber-400 border-1",
+    "w-full text-[0.8rem] text-center border-amber-400 transition-all text-black bg-amber-400 border-1 hover:bg-amber-500",
   form: " w-full text-center border-amber-400 text-black bg-amber-400 border-1 hover:bg-amber-500",
 };
 

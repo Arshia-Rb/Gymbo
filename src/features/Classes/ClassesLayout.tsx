@@ -12,7 +12,7 @@ function ClassesLayout() {
         <p className="text-xs text-stone-400">
           Group classes that keep you motivated and consistent
         </p>
-        <div className="space-y-6 pt-10">
+        <div className="space-y-6 pt-10 md:flex md:justify-between md:gap-2">
           <ClassCard
             img="public/images/classes/strength.webp"
             heading="Strength training"

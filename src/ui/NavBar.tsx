@@ -5,9 +5,11 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { MobileMenuContext } from "../context/MobileMenueContext";
 import Logo from "./Logo";
 import { useNavigate } from "react-router";
+import MobileMenu from "./MobileMenu";
 
 function NavBar() {
   const { setIsMenuOpen } = useContext(MobileMenuContext)!;
+  const { isMenuOpen } = useContext(MobileMenuContext)!;
 
   const navigate = useNavigate();
 
@@ -16,7 +18,8 @@ function NavBar() {
   }
 
   return (
-    <nav className="p4 sticky top-0 left-0 z-40 flex w-full justify-between bg-black text-white sm:px-8">
+    <nav className="sticky top-0 left-0 z-40 flex w-full justify-between bg-black px-4 py-2 text-white sm:px-8">
+      {isMenuOpen && <MobileMenu />}
       <Logo />
       <NavBarLinks parentClassName="hidden sm:flex sm:items-center sm:gap-6 sm:text-base sm:font-semibold" />
       <div className="hidden sm:flex sm:gap-4">

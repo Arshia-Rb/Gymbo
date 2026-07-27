@@ -7,10 +7,12 @@ import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
 import About from "./pages/About";
 import { useState } from "react";
-import MobileMenu from "./ui/MobileMenu";
+
 import { MobileMenuContext } from "./context/MobileMenueContext";
 import SignUp from "./pages/SignUp";
 import { MembershipContext } from "./context/MembershipContext";
+import ScrollToTop from "./ui/ScrollToTop";
+import Overlay from "./ui/overlay";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -20,7 +22,8 @@ function App() {
     <MobileMenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
       <MembershipContext.Provider value={{ hasMembership, setHasMembership }}>
         <BrowserRouter>
-          {isMenuOpen && <MobileMenu />}
+          <ScrollToTop />
+          {isMenuOpen && <Overlay />}
           <Routes>
             <Route index element={<Home />} />
             <Route path="profile" element={<Profile />} />
