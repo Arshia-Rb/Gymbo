@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Spinner from "../../ui/Spinner";
 
 function MembershipInfo() {
   const USER_ID = "LKHVKJHFKAHKUHF6253";
@@ -32,10 +33,10 @@ function MembershipInfo() {
     getQrCode();
   }, []);
 
-  if (isLoading) return <p className="text-2xl text-white">Is loading ...</p>;
+  if (isLoading) return <Spinner />;
 
   return (
-    <article className="mt-10 flex w-fit flex-col items-center gap-10 rounded-2xl bg-neutral-900 p-8 text-white">
+    <article className="flex w-fit flex-col items-center gap-10 rounded-2xl bg-neutral-900 p-8 text-white">
       <table>
         <tbody className="flex flex-col gap-10">
           <tr>

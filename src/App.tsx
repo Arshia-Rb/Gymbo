@@ -12,7 +12,7 @@ import { MobileMenuContext } from "./context/MobileMenueContext";
 import SignUp from "./pages/SignUp";
 import { MembershipContext } from "./context/MembershipContext";
 import ScrollToTop from "./ui/ScrollToTop";
-import Overlay from "./ui/overlay";
+import Overlay from "./ui/Overlay";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
