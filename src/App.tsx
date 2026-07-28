@@ -13,31 +13,38 @@ import SignUp from "./pages/SignUp";
 import { MembershipContext } from "./context/MembershipContext";
 import ScrollToTop from "./ui/ScrollToTop";
 import Overlay from "./ui/Overlay";
+import { AuthContext } from "./context/AuthContext";
+import ProtectedRoute from "./ui/ProtectedRoute";
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [hasMembership, setHasMembership] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hasMembership, setHasMembership] = useState(false);
+  const [isAuth, setIsAuth] = useState(false);
 
   return (
-    <MobileMenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
-      <MembershipContext.Provider value={{ hasMembership, setHasMembership }}>
-        <BrowserRouter>
-          <ScrollToTop />
-          {isMenuOpen && <Overlay />}
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="profile" element={<Profile />} />
-            <Route path="classes" element={<Classes />} />
-            <Route path="membership" element={<Membership />} />
-            <Route path="login" element={<Login />} />
-            <Route path="sign-up" element={<SignUp />} />
-            <Route path="*" element={<PageNotFound />} />
+    <AuthContext.Provider value={{ isAuth, setIsAuth }}>
+      <MobileMenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+        <MembershipContext.Provider value={{ hasMembership, setHasMembership }}>
+          <BrowserRouter>
+            <ScrollToTop />
+            {isMenuOpen && <Overlay />}
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="classes" element={<Classes />} />
+              <Route element={<ProtectedRoute />}>
+                <Route path="membership" element={<Membership />} />
+              </Route>
+              <Route path="login" element={<Login />} />
+              <Route path="sign-up" element={<SignUp />} />
+              <Route path="*" element={<PageNotFound />} />
 
-            <Route path="about" element={<About />} />
-          </Routes>
-        </BrowserRouter>
-      </MembershipContext.Provider>
-    </MobileMenuContext.Provider>
+              <Route path="about" element={<About />} />
+            </Routes>
+          </BrowserRouter>
+        </MembershipContext.Provider>
+      </MobileMenuContext.Provider>
+    </AuthContext.Provider>
   );
 }
 
