@@ -2,11 +2,15 @@ import type { ReactNode } from "react";
 
 interface CustomFormProps {
   children: ReactNode;
+  onSubmit: () => void;
 }
 
-function CustomForm({ children }: CustomFormProps) {
+function CustomForm({ children, onSubmit }: CustomFormProps) {
   return (
-    <form className="flex max-w-md flex-col gap-6 rounded-2xl border border-stone-800 bg-zinc-950 px-8 py-6">
+    <form
+      onSubmit={onSubmit}
+      className="flex max-w-md flex-col gap-6 rounded-2xl border border-stone-800 bg-zinc-950 px-8 py-6"
+    >
       {children}
     </form>
   );

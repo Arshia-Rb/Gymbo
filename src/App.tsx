@@ -30,10 +30,10 @@ function App() {
             {isMenuOpen && <Overlay />}
             <Routes>
               <Route index element={<Home />} />
-              <Route path="profile" element={<Profile />} />
               <Route path="classes" element={<Classes />} />
               <Route element={<ProtectedRoute />}>
                 <Route path="membership" element={<Membership />} />
+                <Route path="profile" element={<Profile />} />
               </Route>
               <Route path="login" element={<Login />} />
               <Route path="sign-up" element={<SignUp />} />

@@ -2,6 +2,7 @@ interface ButtonProps {
   children: React.ReactNode;
   type?: string;
   onClick?: () => void;
+  submit?: boolean;
 }
 //Used to be able to recieve string props,then used them to index different styles
 interface stringIndex {
@@ -22,9 +23,13 @@ const variations: stringIndex = {
   form: " w-full text-center border-amber-400 text-black bg-amber-400 border-1 hover:bg-amber-500",
 };
 
-function Button({ children, type = "primary", onClick }: ButtonProps) {
+function Button({ children, type = "primary", onClick, submit }: ButtonProps) {
   return (
-    <button onClick={onClick} className={baseStyles + variations[type]}>
+    <button
+      type={submit ? "submit" : "button"}
+      onClick={onClick}
+      className={baseStyles + variations[type]}
+    >
       {children}
     </button>
   );
