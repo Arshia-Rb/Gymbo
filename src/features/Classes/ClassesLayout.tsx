@@ -14,19 +14,19 @@ function ClassesLayout() {
         </p>
         <div className="space-y-6 pt-10 md:flex md:justify-between md:gap-2">
           <ClassCard
-            img="public/images/classes/strength.webp"
+            img="images/classes/strength.webp"
             heading="Strength training"
             schedule="Mon, Wed, Fri. 6:00 PM"
             content="Build muscle and get stronger with expert trainers"
           />
           <ClassCard
-            img="public/images/classes/yoga.webp"
+            img="images/classes/yoga.webp"
             heading="Yoga class"
             schedule="Sun. 7:00 AM"
             content="Improve felexibility, reduce stress, and find your balance"
           />
           <ClassCard
-            img="public/images/classes/boxing.webp"
+            img="images/classes/boxing.webp"
             heading="Boxing training"
             schedule="Sat. 10:00 AM"
             content="Fun, high-energy boxing workout for all levels."

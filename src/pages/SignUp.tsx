@@ -11,7 +11,7 @@ function SignUp() {
   return (
     <LoginContainer>
       <FormProvider {...methods}>
-        <CustomForm>
+        <CustomForm onSubmit={() => {}}>
           <div className="space-y-2">
             <h2 className="text-3xl font-bold">Sign Up</h2>
             <p className="text-sm text-stone-500">
