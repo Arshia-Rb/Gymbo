@@ -21,18 +21,35 @@ function ImageSlider() {
   //
 
   return (
-    <div className="mt-10 flex">
-      <button onClick={handlePrev} className="text-2xl text-stone-400">
-        <IoIosArrowBack />
-      </button>
-      <img
-        src={`images/environment/${images[imageIndex]}`}
-        className="mx-auto max-w-3/4 rounded-2xl border-4 border-stone-400 object-cover shadow-md shadow-stone-400"
-      />
-      <button onClick={handleNext} className="text-2xl text-stone-400">
-        <IoIosArrowForward />
-      </button>
-    </div>
+    //Only one of these parent divs gets rendered, based on the screen size
+    <>
+      <div className="mt-10 flex justify-center gap-4 md:hidden">
+        <button
+          className="rounded-full text-2xl text-stone-400 hover:cursor-pointer hover:bg-zinc-900 hover:text-amber-400 active:bg-zinc-900"
+          onClick={handlePrev}
+        >
+          <IoIosArrowBack />
+        </button>
+        <img
+          src={`images/environment/${images[imageIndex]}`}
+          className="h-45 w-3/4 rounded-2xl border-4 border-zinc-900 object-cover md:h-80"
+        />
+        <button
+          onClick={handleNext}
+          className="rounded-full text-2xl text-stone-400 hover:cursor-pointer hover:bg-zinc-900 hover:text-amber-400 active:bg-zinc-900"
+        >
+          <IoIosArrowForward />
+        </button>
+      </div>
+      <div className="mt-10 hidden gap-4 md:flex">
+        {images.map((imgSrc) => (
+          <img
+            src={`images/environment/${imgSrc}`}
+            className="w-1/3 rounded-2xl border-4 border-zinc-900 object-cover"
+          />
+        ))}
+      </div>
+    </>
   );
 }
 

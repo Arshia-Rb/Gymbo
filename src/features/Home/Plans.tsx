@@ -45,7 +45,7 @@ function Plans() {
   return (
     <section className="w-full border-y-2 border-stone-800 bg-zinc-950 px-9 py-5">
       <h3 className="mb-2 text-sm text-amber-400">Membership plans</h3>
-      <h2 className="font-heading text-lg font-bold tracking-wide text-white">
+      <h2 className="text-lg font-bold tracking-wide text-white">
         Choose the plan that fits you
       </h2>
       <p className="text-xs text-stone-400">

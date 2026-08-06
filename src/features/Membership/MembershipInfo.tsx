@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Spinner from "../../ui/Spinner";
 
+const USER_ID = "LKHVKJHFKAHKUHF6253";
 function MembershipInfo() {
-  const USER_ID = "LKHVKJHFKAHKUHF6253";
   const [isLoading, setIsLoading] = useState(false);
   const [imgUrl, setImgUrl] = useState<string | undefined>(undefined);
 
