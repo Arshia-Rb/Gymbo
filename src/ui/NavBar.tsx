@@ -7,6 +7,8 @@ import Logo from "./Logo";
 import { useNavigate } from "react-router";
 import MobileMenu from "./MobileMenu";
 
+import { AnimatePresence, motion } from "motion/react";
+
 function NavBar() {
   const { setIsMenuOpen } = useContext(MobileMenuContext)!;
   const { isMenuOpen } = useContext(MobileMenuContext)!;
@@ -19,7 +21,19 @@ function NavBar() {
 
   return (
     <nav className="sticky top-0 left-0 z-40 flex w-full justify-between bg-black px-4 py-2 text-white sm:px-8">
-      {isMenuOpen && <MobileMenu />}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ duration: 0.3 }}
+            className="fixed right-0 z-50 flex h-dvh w-2/3 flex-col border-l border-stone-300 bg-black font-semibold sm:hidden"
+          >
+            <MobileMenu />
+          </motion.div>
+        )}
+      </AnimatePresence>
       <Logo />
       <NavBarLinks parentClassName="hidden sm:flex sm:items-center sm:gap-6 sm:text-base sm:font-semibold" />
       <div className="hidden sm:flex sm:gap-4">

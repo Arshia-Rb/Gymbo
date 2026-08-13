@@ -16,6 +16,8 @@ import Overlay from "./ui/Overlay";
 import { AuthContext } from "./context/AuthContext";
 import ProtectedRoute from "./ui/ProtectedRoute";
 
+import { AnimatePresence, motion } from "motion/react";
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasMembership, setHasMembership] = useState(false);
@@ -27,7 +29,18 @@ function App() {
         <MembershipContext.Provider value={{ hasMembership, setHasMembership }}>
           <BrowserRouter>
             <ScrollToTop />
-            {isMenuOpen && <Overlay />}
+            <AnimatePresence>
+              {isMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+                >
+                  <Overlay />
+                </motion.div>
+              )}
+            </AnimatePresence>
             <Routes>
               <Route index element={<Home />} />
               <Route path="classes" element={<Classes />} />
