@@ -4,42 +4,47 @@ export interface PlanStructure {
   title: string;
   subTitle?: string;
   price: number;
+  mostPopular: boolean;
   tags: string[];
 }
 
-const basicPlan: PlanStructure = {
-  title: "Basic",
-  subTitle: "Start your fitness journey",
-  price: 29,
-  tags: [
-    "Accses to gym equipments",
-    "Locker room access",
-    "1 free group class / month",
-  ],
-};
-
-const proPLan: PlanStructure = {
-  title: "Pro",
-  subTitle: "Take your training to the next level.",
-  price: 59,
-  tags: [
-    "All Basic features ",
-    "Unlimited group classes",
-    "Personalized workout plan",
-    "10% off on supplements",
-  ],
-};
-const elitePlan: PlanStructure = {
-  title: "Elite",
-  subTitle: "For those who want the best",
-  price: 89,
-  tags: [
-    "All Pro features ",
-    "1 Personal training / week",
-    "Nutrition consultation",
-    "20% off on supplements",
-  ],
-};
+const plans: PlanStructure[] = [
+  {
+    title: "Basic",
+    subTitle: "Start your fitness journey",
+    price: 29,
+    mostPopular: false,
+    tags: [
+      "Accses to gym equipments",
+      "Locker room access",
+      "1 free group class / month",
+    ],
+  },
+  {
+    title: "Pro",
+    subTitle: "Take your training to the next level.",
+    price: 59,
+    mostPopular: true,
+    tags: [
+      "All Basic features ",
+      "Unlimited group classes",
+      "Personalized workout plan",
+      "10% off on supplements",
+    ],
+  },
+  {
+    title: "Elite",
+    subTitle: "For those who want the best",
+    price: 89,
+    mostPopular: false,
+    tags: [
+      "All Pro features ",
+      "1 Personal training / week",
+      "Nutrition consultation",
+      "20% off on supplements",
+    ],
+  },
+];
 
 function Plans() {
   return (
@@ -53,9 +58,9 @@ function Plans() {
       </p>
 
       <div className="flex flex-col md:flex-row md:gap-8">
-        <PricingCard plan={basicPlan} />
-        <PricingCard plan={proPLan} mostPopular={true} />
-        <PricingCard plan={elitePlan} />
+        {plans.map((plan) => (
+          <PricingCard plan={plan} key={plan.title} />
+        ))}
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ interface stringIndex {
   [key: string]: string;
 }
 
-const baseStyles = "cursor-pointer rounded-sm px-4 py-2  font-bold  ";
+const baseStyles = "cursor-pointer rounded-sm px-4 py-2  font-bold ";
 
 const variations: stringIndex = {
   primary:

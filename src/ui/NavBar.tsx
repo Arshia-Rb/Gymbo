@@ -42,7 +42,10 @@ function NavBar() {
         </Button>
         <Button onClick={() => navigate("/sign-up")}>Sign Up</Button>
       </div>
-      <button onClick={handleMenuClick} className="sm:hidden">
+      <button
+        onClick={handleMenuClick}
+        className="active:bg-neutral-900 sm:hidden"
+      >
         <HiOutlineMenu className="h-8 w-8" />
       </button>
     </nav>

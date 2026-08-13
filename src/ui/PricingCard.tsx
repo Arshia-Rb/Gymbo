@@ -5,17 +5,16 @@ import { FaCheck } from "react-icons/fa";
 
 interface PricingCardProps {
   plan: PlanStructure;
-  mostPopular?: boolean;
 }
 
-function PricingCard({ plan, mostPopular }: PricingCardProps) {
+function PricingCard({ plan }: PricingCardProps) {
   const navigate = useNavigate();
 
   return (
     <div
-      className={`relative my-6 h-80 w-full rounded-2xl border-2 ${mostPopular ? "border-amber-400" : "border-stone-800"} bg-neutral-950 p-6`}
+      className={`relative my-6 h-80 w-full rounded-2xl border-2 ${plan.mostPopular ? "border-amber-400" : "border-stone-800"} bg-neutral-950 p-6`}
     >
-      {mostPopular && (
+      {plan.mostPopular && (
         <span className="absolute -top-9 right-1/2 translate-1/2 rounded-sm bg-amber-400 px-4 py-2 text-sm font-bold text-black">
           Most Popular
         </span>
@@ -34,15 +33,12 @@ function PricingCard({ plan, mostPopular }: PricingCardProps) {
         ))}
       </ul>
 
-      {mostPopular ? (
-        <Button onClick={() => navigate("/login")} type="mostPopular">
-          Choose Plan
-        </Button>
-      ) : (
-        <Button onClick={() => navigate("/login")} type="pricing">
-          Choose Plan
-        </Button>
-      )}
+      <Button
+        onClick={() => navigate("/login")}
+        type={`${plan.mostPopular ? "mostPopular" : "pricing"}`}
+      >
+        Choose Plan
+      </Button>
     </div>
   );
 }

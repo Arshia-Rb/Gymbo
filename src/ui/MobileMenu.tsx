@@ -18,7 +18,10 @@ function MobileMenu() {
 
   return (
     <menu className="flex flex-col">
-      <button onClick={handleCloseMenu} className="mt-6 mr-6 ml-auto">
+      <button
+        onClick={handleCloseMenu}
+        className="mt-6 mr-6 ml-auto active:bg-neutral-900"
+      >
         <VscClose className="h-8 w-8" />
       </button>
 

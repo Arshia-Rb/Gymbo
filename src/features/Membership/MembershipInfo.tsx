@@ -14,7 +14,7 @@ function MembershipInfo() {
           `https://api.qrserver.com/v1/create-qr-code/?data=${USER_ID}&size=1000x1000`,
         );
 
-        // This is so the image loads first then the component gets rendered, so the image wont flash in.
+        // This is for the image to load first then the component gets rendered, so the image won't flash in.
         const img = new Image();
         img.src = res.url;
 

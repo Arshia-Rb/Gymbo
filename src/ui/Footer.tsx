@@ -12,7 +12,7 @@ function Footer() {
           <h3 className="mb-2 text-base font-bold text-white">Quick links</h3>
           <div className="flex flex-col items-center gap-4 text-xs text-stone-400">
             <Link to="/classes">Classes</Link>
-            <Link to="/about">Membership</Link>
+            <Link to="/membership">Membership</Link>
             <Link to="/about">About</Link>
           </div>
         </div>
@@ -36,10 +36,10 @@ function Footer() {
         <div>
           <h3 className="mb-2 font-bold text-white">Follow us</h3>
           <div className="flex gap-2">
-            <a href="#">
+            <a href="https://instagram.com">
               <FaInstagram className="size-8 text-stone-400 transition-all hover:text-rose-600" />
             </a>
-            <a href="#">
+            <a href="https://youtube.com">
               <FaYoutube className="size-8 text-stone-400 transition-all hover:text-red-700" />
             </a>
           </div>
