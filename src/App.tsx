@@ -17,6 +17,7 @@ import { AuthContext } from "./context/AuthContext";
 import ProtectedRoute from "./ui/ProtectedRoute";
 
 import { AnimatePresence, motion } from "motion/react";
+import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,6 +42,7 @@ function App() {
                 </motion.div>
               )}
             </AnimatePresence>
+
             <Routes>
               <Route index element={<Home />} />
               <Route path="classes" element={<Classes />} />
@@ -50,6 +52,7 @@ function App() {
               </Route>
               <Route path="login" element={<Login />} />
               <Route path="sign-up" element={<SignUp />} />
+              <Route path="forgot-password" element={<ForgotPassword />} />
               <Route path="*" element={<PageNotFound />} />
 
               <Route path="about" element={<About />} />

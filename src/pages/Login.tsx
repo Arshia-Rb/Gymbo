@@ -7,7 +7,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 
-type data = {
+export type data = {
   email: string;
   password: string;
 };
@@ -73,9 +73,12 @@ function Login() {
               Remember me
             </label>
 
-            <a href="#" className="font-medium text-stone-400 hover:underline">
+            <Link
+              to={"/forgot-password"}
+              className="font-medium text-stone-400 hover:underline"
+            >
               Forgot password?
-            </a>
+            </Link>
           </div>
           {wrongData && (
             <p className="text-center text-sm text-red-700">
