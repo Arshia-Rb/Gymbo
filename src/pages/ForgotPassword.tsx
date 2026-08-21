@@ -13,7 +13,7 @@ function ForgotPassword() {
 
   function onSubmit() {
     //it should sends the email address for verification. then:
-    navigate("/");
+    navigate("/email-verification");
   }
 
   return (

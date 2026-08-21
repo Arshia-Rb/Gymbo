@@ -10,6 +10,8 @@ import { useState } from "react";
 
 import { MobileMenuContext } from "./context/MobileMenueContext";
 import SignUp from "./pages/SignUp";
+import ForgotPassword from "./pages/ForgotPassword";
+import EmailVerification from "./pages/EmailVerification";
 import { MembershipContext } from "./context/MembershipContext";
 import ScrollToTop from "./ui/ScrollToTop";
 import Overlay from "./ui/Overlay";
@@ -17,7 +19,6 @@ import { AuthContext } from "./context/AuthContext";
 import ProtectedRoute from "./ui/ProtectedRoute";
 
 import { AnimatePresence, motion } from "motion/react";
-import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,6 +54,10 @@ function App() {
               <Route path="login" element={<Login />} />
               <Route path="sign-up" element={<SignUp />} />
               <Route path="forgot-password" element={<ForgotPassword />} />
+              <Route
+                path="email-verification"
+                element={<EmailVerification />}
+              />
               <Route path="*" element={<PageNotFound />} />
 
               <Route path="about" element={<About />} />
