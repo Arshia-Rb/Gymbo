@@ -1,75 +1,131 @@
-# React + TypeScript + Vite
+# Gymbo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gymbo is a responsive gym website built as a **frontend** development project.
+it can be used to buy memberships online and use a unique QR-code to access the gym.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[Live demo](https://gymbo-fitness.netlify.app)
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<p align="center">
+  <img src="./screenshots/home.PNG" width="45%">
+  <img src="./screenshots/membership.PNG" width="45%">
+</p>
+<p align="center">
+  <img src="./screenshots/classes.PNG" width="45%">
+  <img src="./screenshots/environment.PNG" width="45%">
+</p>
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Responsive design
+- Various membership plans
+- QR-code integration
+- Classes
+- Authentication( fake for now without a backend😁 )
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies and libraries
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- React
+- Typescript
+- Tailwind CSS
+- Vite
+- React hook form
+- Context API
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Installation
 
+Follow the steps below to run the project locally.
+
+### Prerequisites
+
+Before running the project, make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- npm (included with Node.js)
+- Git
+
+You can check whether they are installed by running:
+
+```bash
+node --version
+npm --version
+git --version
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 1.Clone the repository
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Clone the repository to your local machine:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/Arshia-Rb/Gymbo.git
 ```
+
+Then navigate to the project directory:
+
+```bash
+cd Gymbo
+```
+
+## 2. Install dependencies
+
+Install the project's dependencies using npm:
+
+```bash
+npm install
+```
+
+## 3.Run the development server
+
+```bash
+npm run dev
+```
+
+The application should now be available at:
+
+```text
+http://localhost:5173
+```
+
+Open the URL in your browser to view the application.
+
+### 4. Build for production
+
+To create a production build, run:
+
+```bash
+npm run build
+```
+
+After the build completes, start the production server:
+
+```bash
+npm run preview
+```
+
+The application should then be available at:
+
+```text
+http://localhost:4173
+```
+
+## Note:
+
+Gymbo is a personal project for a fictional gym, designed and developed from scratch to practice and demonstrate frontend development skills.
+
+## What i learned
+
+- Buillding from a blank page
+- How to structure a project
+- Learned more typescript
+- Learned that planning and design matters. it can cause decision fatigue if not done properly at the beginning.
+- Gained more experience with React and tailwind
+
+## Future improvements
+
+- Develop pages for buying memberships
+- Develop pages for enrolling for classes
+- Add a backend
+- Add a database with users
