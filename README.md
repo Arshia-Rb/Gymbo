@@ -9,13 +9,15 @@ it can be used to buy memberships online and use a unique QR-code to access the 
 
 ## Screenshots
 
+<p><img src="./Screenshots/home.PNG" width="100%"></p>
+
 <p align="center">
-  <img src="./screenshots/home.PNG" width="45%">
-  <img src="./screenshots/membership.PNG" width="45%">
+  <img src="./Screenshots/membership.PNG" width="45%">
+  <img src="./Screenshots/login.PNG" width="45%">
 </p>
 <p align="center">
-  <img src="./screenshots/classes.PNG" width="45%">
-  <img src="./screenshots/environment.PNG" width="45%">
+  <img src="./Screenshots/classes.PNG" width="45%">
+  <img src="./Screenshots/environment.PNG" width="45%">
 </p>
 
 ## Features
